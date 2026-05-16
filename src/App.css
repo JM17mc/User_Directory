@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #1a103d, #2b1055, #0f172a);
+  background: radial-gradient(circle at top, #020617, #000000);
   color: white;
   overflow-x: hidden;
 }
@@ -9,11 +9,11 @@ body {
 body::before {
   content: "";
   position: fixed;
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
   background: radial-gradient(
     circle,
-    rgba(255, 0, 200, 0.18),
+    rgba(0, 200, 255, 0.18),
     transparent 70%
   );
   top: -120px;
@@ -25,11 +25,11 @@ body::before {
 body::after {
   content: "";
   position: fixed;
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   background: radial-gradient(
     circle,
-    rgba(140, 82, 255, 0.18),
+    rgba(0, 100, 255, 0.18),
     transparent 70%
   );
   bottom: -100px;
@@ -67,12 +67,12 @@ body::after {
   font-size: 38px;
   margin-top: 20px;
   color: #ffffff;
-  text-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+  text-shadow: 0 0 20px rgba(0, 200, 255, 0.6);
 }
 
 .subtitle {
   margin-bottom: 35px;
-  color: #f8c8ff;
+  color: #9fdcff;
   letter-spacing: 2px;
   font-size: 16px;
 }
@@ -83,7 +83,7 @@ body::after {
 }
 
 .error {
-  color: #ff6b81;
+  color: #ff4d6d;
   font-weight: bold;
 }
 
@@ -99,22 +99,34 @@ body::after {
   padding: 22px;
   border-radius: 24px;
   text-align: left;
-  background: rgba(255, 255, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  border: 1px solid rgba(0, 200, 255, 0.15);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(0, 150, 255, 0.12);
+
   transition: 0.35s ease;
 }
 
 .details:hover {
   transform: translateY(-8px) scale(1.03);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(0, 200, 255, 0.25);
 }
 
 .details h3 {
-  color: #ffb3ff;
+  color: #d9f1ff;
   margin-bottom: 12px;
   font-size: 22px;
-  text-shadow: 0 0 10px rgba(255, 0, 200, 0.35);
+
+  text-shadow:
+    0 0 10px rgba(0, 200, 255, 0.35);
 }
 
 .details p {
@@ -125,5 +137,5 @@ body::after {
 }
 
 .details p strong {
-  color: #f8c8ff;
+  color: #8fdcff;
 }
